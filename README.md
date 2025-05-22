@@ -1,9 +1,19 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Agora Implementation
+This is a [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+## Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
+## Prerequisites
+Before running this project, ensure you have installed:
+- Node.js (v14 or later)
+- npm or yarn
+- React Native CLI
+- Android Studio (for Android development) or Xcode (for iOS development)
+- Watchman (for macOS users)
+
+  
 ## Step 1: Start the Metro Server
 
 First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
@@ -46,7 +56,16 @@ If everything is set up _correctly_, you should see your new app running in your
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-## Step 3: Modifying your App
+## Step 3: Add Agora App Key
+
+### Due to security reasons, the Agora App Key is not included in the repository. You must manually add it
+
+```bash
+# contants.tsx
+export const AGORA_KEY = 'your-agora-key-here';
+```
+
+## Step 4: Modifying your App
 
 Now that you have successfully run the app, let's modify it.
 
@@ -55,9 +74,30 @@ Now that you have successfully run the app, let's modify it.
 
    For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
 
-## Congratulations! :tada:
+# Agora Call Testing
 
-You've successfully run and modified your React Native App. :partying_face:
+## Login Credentials for Testing
+
+**To test the Agora basic call structure, use the following credentials**
+
+```bash
+email: yop@yopmail.com
+password: 12345678
+
+email: khawar1@yopmail.com
+password: 12345678
+```
+
+## Making a Call
+
+1. Login using the test credentials.
+2. A **channel name** will be provided.
+3. Use the **same channel** name on another device (logged in with the same or another account) to join the call.
+ 
+## Notes
+
+- Ensure you have granted all required permissions (camera, microphone).
+- Agora setup may vary depending on your App ID settings (e.g., token-based security).
 
 ### Now what?
 
